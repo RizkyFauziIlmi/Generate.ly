@@ -33,7 +33,7 @@ export const Navbar = () => {
     <React.Fragment>
         <Flex alignItems={'center'} justifyContent={'space-around'} mt={3}>
             <Link href='/'>
-                <Heading size={'sm'}>Generator.ly</Heading>
+                <Heading size={'sm'}>Generate.ly</Heading>
             </Link>
             <Flex alignItems={'center'} justifyContent={'center'}>
                 <IconButton variant={'unstyled'} onClick={toggleColorMode} aria-label="theme-button" icon={colorMode === 'light' ? <SunIcon /> : <MoonIcon /> } />  
