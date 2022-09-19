@@ -1,4 +1,3 @@
-import { GeneratorTabs } from "./components/GeneratorTabs";
 import { Navbar } from "./components/Navbar";
 import {
   BrowserRouter,
@@ -6,6 +5,7 @@ import {
   Route
 } from 'react-router-dom'
 import { PasswordGenerator } from "./components/PasswordGenerator";
+import { Flex } from "@chakra-ui/react";
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/" element={<GeneratorTabs />}/>
+            <Route path="/" element={<PasswordGenerator />}/>
             <Route path="/password-generator" element={<PasswordGenerator />}/>
           </Routes>
       </BrowserRouter> 

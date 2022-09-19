@@ -1,5 +1,5 @@
 import { CopyIcon, DeleteIcon, LockIcon, NotAllowedIcon, SettingsIcon } from '@chakra-ui/icons'
-import { Box, Button, Checkbox, Flex, Heading, IconButton, Input, InputGroup, InputRightElement, ListItem, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Text, Textarea, UnorderedList, useBoolean, useDisclosure, useToast } from '@chakra-ui/react'
+import { Button, Checkbox, Flex, Heading, IconButton, Input, InputGroup, InputRightElement, ListItem, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Text, UnorderedList, useBoolean, useDisclosure, useToast } from '@chakra-ui/react'
 import React from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
@@ -68,8 +68,8 @@ export const PasswordGenerator = () => {
 
   return (
     <Flex flexDir={'column'} alignItems={'center'} justifyContent={'center'} height={'100vh'}>
-        <Flex flexDir={'column'} alignItems={'center'} borderRadius={5} boxShadow={'dark-lg'} p={5}>
-            <Heading size={'lg'} pb={3}>🔑 Password Generator</Heading>
+        <Flex flexDir={'column'} alignItems={'center'} borderRadius={5} boxShadow={'dark-lg'} p={5} width={'80vw'}>
+            <Heading size={'md'} pb={3}>🔑 Password Generator</Heading>
             <Input 
                 variant={'filled'} 
                 value={password}
@@ -77,14 +77,14 @@ export const PasswordGenerator = () => {
                 isReadOnly
             />
             <Flex m={2} gap={1}>
-                <Button leftIcon={<LockIcon />} onClick={generatePassword}>Generate</Button>
+                <Button leftIcon={<LockIcon />} size={'sm'} onClick={generatePassword}>Generate</Button>
                 <CopyToClipboard
                     text={password}
                     onCopy={handleCopyToast}
                 >
-                    <Button leftIcon={<CopyIcon />} >Copy</Button>
+                    <Button leftIcon={<CopyIcon />} size={'sm'} >Copy</Button>
                 </CopyToClipboard>
-                <Button leftIcon={<SettingsIcon />} onClick={settingModal.onOpen}>Setting</Button>
+                <Button leftIcon={<SettingsIcon />} size={'sm'} onClick={settingModal.onOpen}>Setting</Button>
             </Flex>
             <Modal onClose={settingModal.onClose} isOpen={settingModal.isOpen} isCentered>
                 <ModalOverlay />
