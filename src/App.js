@@ -5,7 +5,6 @@ import {
   Route
 } from 'react-router-dom'
 import { PasswordGenerator } from "./components/PasswordGenerator";
-import { Flex } from "@chakra-ui/react";
 
 
 function App() {
